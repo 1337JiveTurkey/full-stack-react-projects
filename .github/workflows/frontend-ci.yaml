@@ -1,3 +1,4 @@
+# Blog Frontend CI
 name: Blog Frontend CI
 on:
   push:
