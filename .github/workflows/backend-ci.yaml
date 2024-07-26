@@ -15,7 +15,7 @@ jobs:
         node-version: [16.x, 18.x, 20.x]
     defaults:
       run:
-        working-directory: ./ch5/backend
+        working-directory: ./backend
     steps:
       - uses: actions/checkout@v3
       - name: Use Node.js ${{ matrix.node-version }}
@@ -25,7 +25,10 @@ jobs:
           cache: "npm"
       - name: Install Dependencies
         run: npm install
+        working-directory: ./ch5
       - name: Run linter on backend
         run: npm run lint
+        working-directory: ./ch5
       - name: Run backend tests
         run: npm test
+        working-directory: ./ch5
