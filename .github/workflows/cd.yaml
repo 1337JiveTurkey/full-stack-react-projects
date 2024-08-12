@@ -3,6 +3,9 @@ on:
   push:
     branches:
       - master
+    paths:
+      - ch5/**
+
 jobs:
   deploy:
     runs-on: ubuntu-latest

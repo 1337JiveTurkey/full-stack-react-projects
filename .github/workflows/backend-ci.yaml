@@ -4,9 +4,13 @@ on:
   push:
     branches:
       - master
+    paths:
+      - ch5/**
   pull_request:
     branches:
       - master
+    paths:
+      - ch5/**
 jobs:
   lint-and-test:
     runs-on: ubuntu-latest
